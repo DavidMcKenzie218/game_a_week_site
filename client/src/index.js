@@ -15,14 +15,11 @@ const reactContainer = function(){
 window.onload = function(){
 
   reactContainer();
-  
+
   ReactDOM.render(
     <h1>Welcome</h1>,
     document.querySelector('#react-container')
 
   )
-    
-
-  
  
 }
