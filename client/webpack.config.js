@@ -1,9 +1,15 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 config = {
   entry: "./src/index.js",
   output: {
+    path: 'dist',
     filename: "bundle.js",
     path: "./build"
   },
+  plugins: [new HtmlWebpackPlugin({
+    title: "Game a Week"
+  })],
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
@@ -18,7 +24,8 @@ config = {
         }
       }
     ]
-  }
+  },
+  devtool: 'source-map'
 }
 
 module.exports = config;
