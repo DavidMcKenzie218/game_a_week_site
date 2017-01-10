@@ -21507,7 +21507,7 @@
 	      ),
 	      React.createElement(TextBox, { text: "This is example text for the text box" }),
 	      React.createElement(YoutubeBox, { link: "https://www.youtube.com/embed/ESxdCohXbWE", width: "420", height: "315" }),
-	      React.createElement(ImageBox, null)
+	      React.createElement(ImageBox, { source: "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg" })
 	    );
 	  }
 	
@@ -21543,16 +21543,16 @@
 /* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
 	var React = __webpack_require__(1);
 	
 	var imageBox = React.createClass({
-	  displayName: "imageBox",
+	  displayName: 'imageBox',
 	
 	
 	  render: function render() {
-	    return React.createElement("img", { src: "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg" });
+	    return React.createElement('img', { src: this.props.source });
 	  }
 	
 	});
