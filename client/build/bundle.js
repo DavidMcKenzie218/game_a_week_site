@@ -21490,6 +21490,7 @@
 	var React = __webpack_require__(1);
 	var TextBox = __webpack_require__(179);
 	var ImageBox = __webpack_require__(180);
+	var YoutubeBox = __webpack_require__(181);
 	
 	var mainBody = React.createClass({
 	  displayName: 'mainBody',
@@ -21505,6 +21506,7 @@
 	        'Main Body'
 	      ),
 	      React.createElement(TextBox, null),
+	      React.createElement(YoutubeBox, null),
 	      React.createElement(ImageBox, null)
 	    );
 	  }
@@ -21556,6 +21558,26 @@
 	});
 	
 	module.exports = imageBox;
+
+/***/ },
+/* 181 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var React = __webpack_require__(1);
+	
+	var youtubeBox = React.createClass({
+	  displayName: "youtubeBox",
+	
+	
+	  render: function render() {
+	    return React.createElement("iframe", { width: "560", height: "315", src: "https://www.youtube.com/embed/ESxdCohXbWE", frameBorder: "0", allowFullScreen: true });
+	  }
+	
+	});
+	
+	module.exports = youtubeBox;
 
 /***/ }
 /******/ ]);
