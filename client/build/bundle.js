@@ -21488,6 +21488,7 @@
 	'use strict';
 	
 	var React = __webpack_require__(1);
+	var TextBox = __webpack_require__(179);
 	
 	var mainBody = React.createClass({
 	  displayName: 'mainBody',
@@ -21501,13 +21502,38 @@
 	        'h1',
 	        null,
 	        'Main Body'
-	      )
+	      ),
+	      React.createElement(TextBox, null)
 	    );
 	  }
 	
 	});
 	
 	module.exports = mainBody;
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var textBox = React.createClass({
+	  displayName: 'textBox',
+	
+	
+	  render: function render() {
+	    return React.createElement(
+	      'p',
+	      null,
+	      'This is a text Box'
+	    );
+	  }
+	
+	});
+	
+	module.exports = textBox;
 
 /***/ }
 /******/ ]);
