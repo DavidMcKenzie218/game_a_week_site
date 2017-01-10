@@ -21486,17 +21486,136 @@
 /* 179 */,
 /* 180 */,
 /* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
+/* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	var TextBox = __webpack_require__(183);
+	var ImageBox = __webpack_require__(184);
+	var YoutubeBox = __webpack_require__(185);
+	
+	var mainBody = React.createClass({
+	  displayName: 'mainBody',
+	
+	
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(
+	        'h1',
+	        null,
+	        'Main Body'
+	      ),
+	      React.createElement(TextBox, { text: "This is example text for the text box" }),
+	      React.createElement(YoutubeBox, { link: "https://www.youtube.com/embed/ESxdCohXbWE", width: "420", height: "315" }),
+	      React.createElement(ImageBox, { source: "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg", height: "420", width: "315" })
+	    );
+	  }
+	
+	});
+	
+	module.exports = mainBody;
+
+/***/ },
+/* 183 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var textBox = React.createClass({
+	  displayName: 'textBox',
+	
+	
+	  render: function render() {
+	    return React.createElement(
+	      'p',
+	      null,
+	      this.props.text
+	    );
+	  }
+	
+	});
+	
+	module.exports = textBox;
+
+/***/ },
+/* 184 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var imageBox = React.createClass({
+	  displayName: 'imageBox',
+	
+	
+	  render: function render() {
+	    return React.createElement('img', { src: this.props.source, height: this.props.height, width: this.props.width });
+	  }
+	
+	});
+	
+	module.exports = imageBox;
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var React = __webpack_require__(1);
+	
+	var youtubeBox = React.createClass({
+	  displayName: "youtubeBox",
+	
+	
+	  render: function render() {
+	    return React.createElement("iframe", { width: this.props.width, height: this.props.height, src: this.props.link, frameBorder: "0", allowFullScreen: true });
+	  }
+	
+	});
+	
+	module.exports = youtubeBox;
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var headerContainer = React.createClass({
+	  displayName: 'headerContainer',
+	
+	
+	  render: function render() {
+	    return React.createElement(
+	      'h1',
+	      null,
+	      'Header'
+	    );
+	  }
+	
+	});
+	
+	module.exports = headerContainer;
+
+/***/ },
 /* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var React = __webpack_require__(1);
+	var Body = __webpack_require__(182);
+	var Header = __webpack_require__(186);
 	
 	var frontPage = React.createClass({
 	  displayName: 'frontPage',
@@ -21504,9 +21623,10 @@
 	
 	  render: function render() {
 	    return React.createElement(
-	      'h1',
+	      'div',
 	      null,
-	      'Front Page'
+	      React.createElement(Header, null),
+	      React.createElement(Body, null)
 	    );
 	  }
 	
