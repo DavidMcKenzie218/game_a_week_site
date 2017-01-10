@@ -21506,7 +21506,7 @@
 	        'Main Body'
 	      ),
 	      React.createElement(TextBox, { text: "This is example text for the text box" }),
-	      React.createElement(YoutubeBox, { link: "https://www.youtube.com/embed/ESxdCohXbWE" }),
+	      React.createElement(YoutubeBox, { link: "https://www.youtube.com/embed/ESxdCohXbWE", width: "420", height: "315" }),
 	      React.createElement(ImageBox, null)
 	    );
 	  }
@@ -21572,7 +21572,7 @@
 	
 	
 	  render: function render() {
-	    return React.createElement("iframe", { width: "560", height: "315", src: this.props.link, frameBorder: "0", allowFullScreen: true });
+	    return React.createElement("iframe", { width: this.props.width, height: this.props.height, src: this.props.link, frameBorder: "0", allowFullScreen: true });
 	  }
 	
 	});
