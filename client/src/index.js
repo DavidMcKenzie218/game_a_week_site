@@ -16,11 +16,12 @@ const reactContainer = function(){
 window.onload = function(){
 
   reactContainer();
-  
+
   ReactDOM.render(
     <MainBody/>,
     document.querySelector('#react-container')
 
   );
+
  
 }
