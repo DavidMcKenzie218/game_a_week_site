@@ -10,7 +10,7 @@ const mainBody = React.createClass({
       <div>
         <h1>Main Body</h1>
         <TextBox text={"This is example text for the text box"}/>
-        <YoutubeBox/>
+        <YoutubeBox link={"https://www.youtube.com/embed/ESxdCohXbWE"}/>
         <ImageBox/>
       </div>
       )

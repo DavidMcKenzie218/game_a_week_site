@@ -4,7 +4,7 @@ const youtubeBox = React.createClass({
 
   render: function(){
     return(
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/ESxdCohXbWE" frameBorder="0" allowFullScreen></iframe>
+     <iframe width="560" height="315" src={this.props.link} frameBorder="0" allowFullScreen></iframe>
 
       )
   }
