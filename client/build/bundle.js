@@ -48,7 +48,7 @@
 	
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(32);
-	var MainBody = __webpack_require__(178);
+	var FrontPage = __webpack_require__(187);
 	
 	var addDiv = function addDiv(parent) {
 	  var div = document.createElement('div');
@@ -65,7 +65,7 @@
 	
 	  reactContainer();
 	
-	  ReactDOM.render(React.createElement(MainBody, null), document.querySelector('#react-container'));
+	  ReactDOM.render(React.createElement(FrontPage, null), document.querySelector('#react-container'));
 	};
 
 /***/ },
@@ -21482,102 +21482,37 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 178 */
+/* 178 */,
+/* 179 */,
+/* 180 */,
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var React = __webpack_require__(1);
-	var TextBox = __webpack_require__(179);
-	var ImageBox = __webpack_require__(180);
-	var YoutubeBox = __webpack_require__(181);
 	
-	var mainBody = React.createClass({
-	  displayName: 'mainBody',
+	var frontPage = React.createClass({
+	  displayName: 'frontPage',
 	
 	
 	  render: function render() {
 	    return React.createElement(
-	      'div',
+	      'h1',
 	      null,
-	      React.createElement(
-	        'h1',
-	        null,
-	        'Main Body'
-	      ),
-	      React.createElement(TextBox, { text: "This is example text for the text box" }),
-	      React.createElement(YoutubeBox, { link: "https://www.youtube.com/embed/ESxdCohXbWE", width: "420", height: "315" }),
-	      React.createElement(ImageBox, { source: "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg", height: "420", width: "315" })
+	      'Front Page'
 	    );
 	  }
 	
 	});
 	
-	module.exports = mainBody;
-
-/***/ },
-/* 179 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var React = __webpack_require__(1);
-	
-	var textBox = React.createClass({
-	  displayName: 'textBox',
-	
-	
-	  render: function render() {
-	    return React.createElement(
-	      'p',
-	      null,
-	      this.props.text
-	    );
-	  }
-	
-	});
-	
-	module.exports = textBox;
-
-/***/ },
-/* 180 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var React = __webpack_require__(1);
-	
-	var imageBox = React.createClass({
-	  displayName: 'imageBox',
-	
-	
-	  render: function render() {
-	    return React.createElement('img', { src: this.props.source, height: this.props.height, width: this.props.width });
-	  }
-	
-	});
-	
-	module.exports = imageBox;
-
-/***/ },
-/* 181 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	var React = __webpack_require__(1);
-	
-	var youtubeBox = React.createClass({
-	  displayName: "youtubeBox",
-	
-	
-	  render: function render() {
-	    return React.createElement("iframe", { width: this.props.width, height: this.props.height, src: this.props.link, frameBorder: "0", allowFullScreen: true });
-	  }
-	
-	});
-	
-	module.exports = youtubeBox;
+	module.exports = frontPage;
 
 /***/ }
 /******/ ]);
