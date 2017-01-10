@@ -4,7 +4,7 @@ const textBox = React.createClass({
 
   render: function(){
     return(
-      <p>This is a text Box</p>
+      <p>{this.props.text}</p>
       )
   }
 

@@ -9,7 +9,7 @@ const mainBody = React.createClass({
     return(
       <div>
         <h1>Main Body</h1>
-        <TextBox/>
+        <TextBox text={"This is example text for the text box"}/>
         <YoutubeBox/>
         <ImageBox/>
       </div>

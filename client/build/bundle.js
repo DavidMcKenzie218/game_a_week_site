@@ -21505,7 +21505,7 @@
 	        null,
 	        'Main Body'
 	      ),
-	      React.createElement(TextBox, null),
+	      React.createElement(TextBox, { text: "This is example text for the text box" }),
 	      React.createElement(YoutubeBox, null),
 	      React.createElement(ImageBox, null)
 	    );
@@ -21531,7 +21531,7 @@
 	    return React.createElement(
 	      'p',
 	      null,
-	      'This is a text Box'
+	      this.props.text
 	    );
 	  }
 	
