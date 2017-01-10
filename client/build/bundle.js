@@ -21489,6 +21489,7 @@
 	
 	var React = __webpack_require__(1);
 	var TextBox = __webpack_require__(179);
+	var ImageBox = __webpack_require__(180);
 	
 	var mainBody = React.createClass({
 	  displayName: 'mainBody',
@@ -21503,7 +21504,8 @@
 	        null,
 	        'Main Body'
 	      ),
-	      React.createElement(TextBox, null)
+	      React.createElement(TextBox, null),
+	      React.createElement(ImageBox, null)
 	    );
 	  }
 	
@@ -21534,6 +21536,26 @@
 	});
 	
 	module.exports = textBox;
+
+/***/ },
+/* 180 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var React = __webpack_require__(1);
+	
+	var imageBox = React.createClass({
+	  displayName: "imageBox",
+	
+	
+	  render: function render() {
+	    return React.createElement("img", { src: "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg" });
+	  }
+	
+	});
+	
+	module.exports = imageBox;
 
 /***/ }
 /******/ ]);

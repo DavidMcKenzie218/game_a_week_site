@@ -1,5 +1,6 @@
 const React = require('react');
 const TextBox = require('./textBox.jsx');
+const ImageBox = require('./imageBox.jsx');
 
 const mainBody = React.createClass({
 
@@ -8,6 +9,7 @@ const mainBody = React.createClass({
       <div>
         <h1>Main Body</h1>
         <TextBox/>
+        <ImageBox/>
       </div>
       )
   }
