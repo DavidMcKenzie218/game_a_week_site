@@ -11,7 +11,7 @@ const mainBody = React.createClass({
         <h1>Main Body</h1>
         <TextBox text={"This is example text for the text box"}/>
         <YoutubeBox link={"https://www.youtube.com/embed/ESxdCohXbWE"} width={"420"} height={"315"}/>
-        <ImageBox source={"https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg"}/>
+        <ImageBox source={"https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg"} height={"420"} width={"315"}/>
       </div>
       )
   }

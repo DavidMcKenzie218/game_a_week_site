@@ -21507,7 +21507,7 @@
 	      ),
 	      React.createElement(TextBox, { text: "This is example text for the text box" }),
 	      React.createElement(YoutubeBox, { link: "https://www.youtube.com/embed/ESxdCohXbWE", width: "420", height: "315" }),
-	      React.createElement(ImageBox, { source: "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg" })
+	      React.createElement(ImageBox, { source: "https://upload.wikimedia.org/wikipedia/commons/8/84/Example.svg", height: "420", width: "315" })
 	    );
 	  }
 	
@@ -21552,7 +21552,7 @@
 	
 	
 	  render: function render() {
-	    return React.createElement('img', { src: this.props.source });
+	    return React.createElement('img', { src: this.props.source, height: this.props.height, width: this.props.width });
 	  }
 	
 	});

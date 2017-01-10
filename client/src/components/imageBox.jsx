@@ -4,7 +4,7 @@ const imageBox = React.createClass({
 
   render: function(){
     return(
-      <img src={this.props.source}></img>
+      <img src={this.props.source} height={this.props.height} width={this.props.width}></img>
     )
   }
 
