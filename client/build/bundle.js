@@ -21615,6 +21615,7 @@
 	var React = __webpack_require__(1);
 	var Logo = __webpack_require__(184);
 	var Button = __webpack_require__(185);
+	var Dropdown = __webpack_require__(186);
 	
 	var headerContainer = React.createClass({
 	  displayName: 'headerContainer',
@@ -21625,7 +21626,8 @@
 	      'div',
 	      null,
 	      React.createElement(Logo, null),
-	      React.createElement(Button, null)
+	      React.createElement(Button, null),
+	      React.createElement(Dropdown, null)
 	    );
 	  }
 	
@@ -21676,6 +21678,34 @@
 	});
 	
 	module.exports = Button;
+
+/***/ },
+/* 186 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var Dropdown = React.createClass({
+	  displayName: 'Dropdown',
+	
+	
+	  render: function render() {
+	    return React.createElement(
+	      'select',
+	      null,
+	      React.createElement(
+	        'option',
+	        null,
+	        'Dropdown'
+	      )
+	    );
+	  }
+	
+	});
+	
+	module.exports = Dropdown;
 
 /***/ }
 /******/ ]);

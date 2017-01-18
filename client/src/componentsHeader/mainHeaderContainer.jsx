@@ -1,6 +1,7 @@
 const React = require('react');
 const Logo = require('./logo.jsx');
 const Button = require('./button.jsx');
+const Dropdown = require('./dropdown.jsx');
 
 const headerContainer = React.createClass({
 
@@ -9,6 +10,7 @@ const headerContainer = React.createClass({
       <div>
         <Logo/>
         <Button/>
+        <Dropdown/>
       </div>
       )
   }
