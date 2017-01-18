@@ -21625,7 +21625,7 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement(Logo, null),
+	      React.createElement(Logo, { source: 'https://upload.wikimedia.org/wikipedia/commons/2/21/Gambas_3_logo.svg', height: '75', width: '75' }),
 	      React.createElement(Button, null),
 	      React.createElement(Dropdown, null)
 	    );
@@ -21648,7 +21648,7 @@
 	
 	
 	  render: function render() {
-	    return React.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/2/21/Gambas_3_logo.svg', height: '75', width: '75' });
+	    return React.createElement('img', { src: this.props.source, height: this.props.height, width: this.props.width });
 	  }
 	
 	});
