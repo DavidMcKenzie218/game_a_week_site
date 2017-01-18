@@ -1,10 +1,11 @@
 const React = require('react');
+const Logo = require('./logo.jsx');
 
 const headerContainer = React.createClass({
 
   render: function(){
     return(
-      <h1>Header</h1>
+      <Logo/>
       )
   }
 

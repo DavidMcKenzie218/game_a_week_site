@@ -48,7 +48,7 @@
 	
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(32);
-	var FrontPage = __webpack_require__(187);
+	var FrontPage = __webpack_require__(178);
 	
 	var addDiv = function addDiv(parent) {
 	  var div = document.createElement('div');
@@ -21482,19 +21482,42 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */,
-/* 182 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var React = __webpack_require__(1);
-	var TextBox = __webpack_require__(183);
-	var ImageBox = __webpack_require__(184);
-	var YoutubeBox = __webpack_require__(185);
+	var Body = __webpack_require__(179);
+	var Header = __webpack_require__(183);
+	
+	var frontPage = React.createClass({
+	  displayName: 'frontPage',
+	
+	
+	  render: function render() {
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(Header, null),
+	      React.createElement(Body, null)
+	    );
+	  }
+	
+	});
+	
+	module.exports = frontPage;
+
+/***/ },
+/* 179 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	var TextBox = __webpack_require__(180);
+	var ImageBox = __webpack_require__(181);
+	var YoutubeBox = __webpack_require__(182);
 	
 	var mainBody = React.createClass({
 	  displayName: 'mainBody',
@@ -21520,7 +21543,7 @@
 	module.exports = mainBody;
 
 /***/ },
-/* 183 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21544,7 +21567,7 @@
 	module.exports = textBox;
 
 /***/ },
-/* 184 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21564,7 +21587,7 @@
 	module.exports = imageBox;
 
 /***/ },
-/* 185 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21584,23 +21607,20 @@
 	module.exports = youtubeBox;
 
 /***/ },
-/* 186 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var React = __webpack_require__(1);
+	var Logo = __webpack_require__(184);
 	
 	var headerContainer = React.createClass({
 	  displayName: 'headerContainer',
 	
 	
 	  render: function render() {
-	    return React.createElement(
-	      'h1',
-	      null,
-	      'Header'
-	    );
+	    return React.createElement(Logo, null);
 	  }
 	
 	});
@@ -21608,31 +21628,24 @@
 	module.exports = headerContainer;
 
 /***/ },
-/* 187 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var React = __webpack_require__(1);
-	var Body = __webpack_require__(182);
-	var Header = __webpack_require__(186);
 	
-	var frontPage = React.createClass({
-	  displayName: 'frontPage',
+	var Logo = React.createClass({
+	  displayName: 'Logo',
 	
 	
 	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      null,
-	      React.createElement(Header, null),
-	      React.createElement(Body, null)
-	    );
+	    return React.createElement('img', { src: 'https://upload.wikimedia.org/wikipedia/commons/2/21/Gambas_3_logo.svg', height: '75', width: '75' });
 	  }
 	
 	});
 	
-	module.exports = frontPage;
+	module.exports = Logo;
 
 /***/ }
 /******/ ]);
