@@ -10,7 +10,7 @@ const headerContainer = React.createClass({
       <div>
         <Logo source={'https://upload.wikimedia.org/wikipedia/commons/2/21/Gambas_3_logo.svg'} height={'75'} width={'75'}/>
         <Button label={"Example Button"}/>
-        <Dropdown/>
+        <Dropdown options={['options 1']}/>
       </div>
       )
   }

@@ -5,7 +5,7 @@ const Dropdown = React.createClass({
   render: function(){
     return(
       <select>
-        <option>Dropdown</option>
+        <option>{this.props.options[0]}</option>
       </select>
       )
   }
