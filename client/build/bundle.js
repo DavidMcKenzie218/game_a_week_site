@@ -21614,13 +21614,19 @@
 	
 	var React = __webpack_require__(1);
 	var Logo = __webpack_require__(184);
+	var Button = __webpack_require__(185);
 	
 	var headerContainer = React.createClass({
 	  displayName: 'headerContainer',
 	
 	
 	  render: function render() {
-	    return React.createElement(Logo, null);
+	    return React.createElement(
+	      'div',
+	      null,
+	      React.createElement(Logo, null),
+	      React.createElement(Button, null)
+	    );
 	  }
 	
 	});
@@ -21646,6 +21652,30 @@
 	});
 	
 	module.exports = Logo;
+
+/***/ },
+/* 185 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var React = __webpack_require__(1);
+	
+	var Button = React.createClass({
+	  displayName: 'Button',
+	
+	
+	  render: function render() {
+	    return React.createElement(
+	      'button',
+	      null,
+	      'Example Button'
+	    );
+	  }
+	
+	});
+	
+	module.exports = Button;
 
 /***/ }
 /******/ ]);
