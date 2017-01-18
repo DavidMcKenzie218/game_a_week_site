@@ -4,7 +4,7 @@ const Button = React.createClass({
 
   render: function(){
     return(
-      <button>Example Button</button>
+      <button>{this.props.label}</button>
       )
   }
 

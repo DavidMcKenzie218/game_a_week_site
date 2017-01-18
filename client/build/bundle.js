@@ -21626,7 +21626,7 @@
 	      'div',
 	      null,
 	      React.createElement(Logo, { source: 'https://upload.wikimedia.org/wikipedia/commons/2/21/Gambas_3_logo.svg', height: '75', width: '75' }),
-	      React.createElement(Button, null),
+	      React.createElement(Button, { label: "Example Button" }),
 	      React.createElement(Dropdown, null)
 	    );
 	  }
@@ -21671,7 +21671,7 @@
 	    return React.createElement(
 	      'button',
 	      null,
-	      'Example Button'
+	      this.props.label
 	    );
 	  }
 	
