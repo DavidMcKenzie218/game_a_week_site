@@ -5,12 +5,17 @@ const DatabaseQuery = function(){
 }
 
 DatabaseQuery.prototype = {
-  all: function(){
+  all: function(onQueryFinnished){
     MongoClient.connect(this.url, function(err, db){
       if(db){
         console.log('Connected to Databse');
+
+        const collection = db.collection('home_page');
+        collection.find().toArray(function(err, docs){
+          onQueryFinnished(docs);
+        });
       }
-    })
+    });
   }
 }
 
