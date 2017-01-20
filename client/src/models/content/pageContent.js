@@ -8,7 +8,9 @@ pageContent.prototype = {
   getData: function(){
     const url = "http://localhost:3000/api/content";
     this.apiRequest.get(url, function(){
-      console.log("API HAS BEEN CALLED");
+      if(this.status != 200) return;
+      let jsonString = this.responseText;
+      console.log(jsonString);
     })
   }
 }

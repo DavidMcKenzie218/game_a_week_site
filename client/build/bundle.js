@@ -21728,7 +21728,9 @@
 	  getData: function getData() {
 	    var url = "http://localhost:3000/api/content";
 	    this.apiRequest.get(url, function () {
-	      console.log("API HAS BEEN CALLED");
+	      if (this.status != 200) return;
+	      var jsonString = this.responseText;
+	      console.log(jsonString);
 	    });
 	  }
 	};
