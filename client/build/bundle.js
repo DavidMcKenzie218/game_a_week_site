@@ -49,6 +49,7 @@
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(32);
 	var FrontPage = __webpack_require__(178);
+	var PageContent = __webpack_require__(187);
 	
 	var addDiv = function addDiv(parent) {
 	  var div = document.createElement('div');
@@ -62,6 +63,10 @@
 	};
 	
 	window.onload = function () {
+	
+	  var content = new PageContent();
+	
+	  content.getData();
 	
 	  reactContainer();
 	
@@ -21706,6 +21711,50 @@
 	});
 	
 	module.exports = Dropdown;
+
+/***/ },
+/* 187 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var apiQuery = __webpack_require__(188);
+	
+	var pageContent = function pageContent() {
+	  this.apiRequest = new apiQuery();
+	};
+	
+	pageContent.prototype = {
+	  getData: function getData() {
+	    var url = "http://localhost:3000/api/content";
+	    this.apiRequest.get(url, function () {
+	      console.log("API HAS BEEN CALLED");
+	    });
+	  }
+	};
+	
+	module.exports = pageContent;
+
+/***/ },
+/* 188 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	var apiRequest = function apiRequest() {};
+	
+	apiRequest.prototype = {
+	  get: function get(url, callback) {
+	    var request = new XMLHttpRequest();
+	    request.open("GET", url);
+	    console.log("Request opened to Api");
+	    request.onload = callback;
+	    request.send();
+	    console.log("Request sent to Api");
+	  }
+	};
+	
+	module.exports = apiRequest;
 
 /***/ }
 /******/ ]);
