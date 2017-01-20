@@ -30,7 +30,9 @@ describe("The empty page conetent:", function(){
 describe("A page with content:", function(){
   
   let page;
-  let header = "Example Header";
+  const header = "Example Header";
+  const paragraph = "Example Paragraph";
+  const url = "Example URL"
 
   before(function(){
     page = new Content();
@@ -47,5 +49,26 @@ describe("A page with content:", function(){
 
   it("should reset the values", function(){
     assert.strictEqual(undefined, page.header);
+  })
+
+  it("should have a paragraph", function(){
+    page.addParagraph(paragraph);
+    assert.deepEqual(["Example Paragraph"], page .paragraphs);
+  })
+
+  it("should have multiple paragraphs", function(){
+    page.addParagraph(paragraph);
+    page.addParagraph(paragraph);
+    assert.deepEqual([paragraph, paragraph], page.paragraphs);
+  })
+
+  it("should have image links", function(){
+    page.addImage(url);
+    assert.deepEqual(["Example URL"], page.images);
+  })
+
+  it("should have video links", function(){
+    page.addVideo(url);
+    assert.deepEqual(["Example URL"], page.videos);
   })
 })

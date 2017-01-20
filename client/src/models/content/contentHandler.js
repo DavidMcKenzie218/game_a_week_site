@@ -14,6 +14,15 @@ ContentHandler.prototype = {
   },
   addHeader: function(newHeader){
     this.header = newHeader;
+  },
+  addParagraph: function(newParagraph){
+    this.paragraphs.push(newParagraph);
+  },
+  addImage: function(newUrl){
+    this.images.push(newUrl);
+  },
+  addVideo: function(newUrl){
+    this.videos.push(newUrl);
   }
 }
 
