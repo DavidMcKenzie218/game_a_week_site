@@ -31,10 +31,10 @@ ContentHandler.prototype = {
     this.sortData();
   },
   sortData: function(){
-    this.addHeader(this.data.header.text);
+    this.addHeader(this.data.header);
     let paraLength = this.data.paragraphs.length;
     for(let x = 0; x < paraLength; x++){
-      this.addParagraph(this.data.paragraphs[x].text);
+      this.addParagraph(this.data.paragraphs[x]);
     }
     this.addVideo(this.data.videos.url);
     let imgLength = this.data.images.length;
