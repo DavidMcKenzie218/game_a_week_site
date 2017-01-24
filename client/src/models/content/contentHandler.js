@@ -31,8 +31,10 @@ ContentHandler.prototype = {
     this.sortData();
   },
   sortData: function(){
-    if(this.data.header){
-      this.header = this.data.header.text;
+    this.addHeader(this.data.header.text);
+    let length = this.data.paragraphs.length;
+    for(let x = 0; x < length; x++){
+      this.addParagraph(this.data.paragraphs[x].text);
     }
   }
 }

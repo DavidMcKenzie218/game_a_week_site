@@ -7,7 +7,11 @@ describe("The page recieving data", function(){
   const data = {
     header: {
       text: "Example Header"
-    }
+    },
+    paragraphs : [
+      {text: "paragraph one"},
+      {text: "paragraph two"},
+      {text: "paragraph three"}    ]
   }
 
   before(function(){
@@ -26,6 +30,11 @@ describe("The page recieving data", function(){
   it("should be able to add a header to the page from the data", function(){
     page.addData(data);
     assert.deepEqual("Example Header", page.header);
+  })
+
+  it("should be able to add paragrpahs from the data", function(){
+    page.addData(data);
+    assert.deepEqual(["paragraph one", "paragraph two", "paragraph three"], page.paragraphs)
   })
 
 })
