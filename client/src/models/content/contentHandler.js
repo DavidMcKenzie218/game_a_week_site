@@ -3,11 +3,13 @@ const ContentHandler = function(){
   this.paragraphs = [];
   this.images = [];
   this.videos = [];
+  this.data;
 }
 
 ContentHandler.prototype = {
   reset: function(){
     delete this.header;
+    delete this.data;
     this.paragraphs = [];
     this.images = [];
     this.videos = [];
@@ -23,6 +25,15 @@ ContentHandler.prototype = {
   },
   addVideo: function(newUrl){
     this.videos.push(newUrl);
+  },
+  addData: function(data){
+    this.data = data;
+    this.sortData();
+  },
+  sortData: function(){
+    if(this.data.header){
+      this.header = this.data.header.text;
+    }
   }
 }
 
