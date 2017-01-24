@@ -32,11 +32,15 @@ ContentHandler.prototype = {
   },
   sortData: function(){
     this.addHeader(this.data.header.text);
-    let length = this.data.paragraphs.length;
-    for(let x = 0; x < length; x++){
+    let paraLength = this.data.paragraphs.length;
+    for(let x = 0; x < paraLength; x++){
       this.addParagraph(this.data.paragraphs[x].text);
     }
-    this.addVideo(this.data.videos.url)
+    this.addVideo(this.data.videos.url);
+    let imgLength = this.data.images.length;
+    for(let i = 0; i < imgLength; i++){
+      this.addImage(this.data.images[i].url)
+    }
   }
 }
 

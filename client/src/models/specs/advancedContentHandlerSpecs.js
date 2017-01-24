@@ -15,7 +15,11 @@ describe("The page recieving data", function(){
     ],
     videos : {
       url: "video.url/123"
-    }
+    },
+    images : [
+      {url: "image.url/1"},
+      {url: "image.url/2"}
+    ]
   }
 
   before(function(){
@@ -44,6 +48,11 @@ describe("The page recieving data", function(){
   it("should be able to add video urls from the data", function(){
     page.addData(data);
     assert.deepEqual(["video.url/123"], page.videos);
+  })
+
+  it("should be able to add image urls from the data", function(){
+    page.addData(data);
+    assert.deepEqual(["image.url/1", "image.url/2"], page.images);
   })
 
 })
