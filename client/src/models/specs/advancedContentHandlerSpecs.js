@@ -11,7 +11,11 @@ describe("The page recieving data", function(){
     paragraphs : [
       {text: "paragraph one"},
       {text: "paragraph two"},
-      {text: "paragraph three"}    ]
+      {text: "paragraph three"}    
+    ],
+    videos : {
+      url: "video.url/123"
+    }
   }
 
   before(function(){
@@ -35,6 +39,11 @@ describe("The page recieving data", function(){
   it("should be able to add paragrpahs from the data", function(){
     page.addData(data);
     assert.deepEqual(["paragraph one", "paragraph two", "paragraph three"], page.paragraphs)
+  })
+
+  it("should be able to add video urls from the data", function(){
+    page.addData(data);
+    assert.deepEqual(["video.url/123"], page.videos);
   })
 
 })

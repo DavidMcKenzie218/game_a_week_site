@@ -36,6 +36,7 @@ ContentHandler.prototype = {
     for(let x = 0; x < length; x++){
       this.addParagraph(this.data.paragraphs[x].text);
     }
+    this.addVideo(this.data.videos.url)
   }
 }
 
