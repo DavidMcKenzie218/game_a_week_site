@@ -5,6 +5,7 @@ const pageContent = function(){
 }
 
 pageContent.prototype = {
+  // GETS DATA FROM THE API
   getData: function(){
     let self = this;
     const url = "http://localhost:3000/api/content";
@@ -15,6 +16,7 @@ pageContent.prototype = {
       self.processData(jsonString);
     })
   },
+  //PARSES THE DATA TO USUABLE FORM
   processData: function(jsonData){
     let data = JSON.parse(jsonData);
     console.log(data);

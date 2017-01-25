@@ -1,4 +1,5 @@
 const ContentHandler = function(){
+  // FUNCTION VARIABLES
   this.header;
   this.paragraphs = [];
   this.images = [];
@@ -8,6 +9,7 @@ const ContentHandler = function(){
 }
 
 ContentHandler.prototype = {
+  // RESETS ALL FUNCTION VARIABLES TO DEFAULT, USED FOR TESTING
   reset: function(){
     delete this.header;
     delete this.data;
@@ -16,6 +18,7 @@ ContentHandler.prototype = {
     this.videos = [];
     this.componentOrder = [];
   },
+  // SETTERS, ALSO DEFINES ORDER OF THE COMPONENTS
   addHeader: function(newHeader){
     this.header = newHeader;
     this.componentOrder.push({component: "header"});
@@ -32,8 +35,6 @@ ContentHandler.prototype = {
   addImage: function(newUrl){
     this.images.push(newUrl);
     let order = newUrl.order;
-    console.log("img order: "+order)
-    console.log(this.componentOrder.length)
     if(order < this.componentOrder.length){
       this.componentOrder.splice((order-1), 0,{component: "image", id: this.images.length-1});
     }else{
@@ -49,10 +50,12 @@ ContentHandler.prototype = {
       this.componentOrder.push({component: "video", id: this.videos.length-1})
     }
   },
+  // TAKES IN THE DATA STARTS THE SORTING
   addData: function(data){
     this.data = data;
     this.sortData();
   },
+  // SORTS THE DATA INTO THE INDIVIDUAL COMPONENTS
   sortData: function(){
     this.addHeader(this.data.header);
     let paraLength = this.data.paragraphs.length;
