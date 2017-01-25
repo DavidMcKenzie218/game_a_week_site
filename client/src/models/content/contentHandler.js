@@ -58,15 +58,24 @@ ContentHandler.prototype = {
   // SORTS THE DATA INTO THE INDIVIDUAL COMPONENTS
   sortData: function(){
     this.addHeader(this.data.header);
-    let paraLength = this.data.paragraphs.length;
-    for(let x = 0; x < paraLength; x++){
+    if(this.data.paragraphs) this.sortParagraphs();
+    if(this.data.images) this.sortImages();
+    if(this.data.videos) this.sortVideos();
+  },
+  sortParagraphs: function(){
+    let length = this.data.paragraphs.length;
+    for(let x = 0; x < length; x++){
       this.addParagraph(this.data.paragraphs[x]);
     }
-    this.addVideo(this.data.videos);
-    let imgLength = this.data.images.length;
-    for(let i = 0; i < imgLength; i++){
-      this.addImage(this.data.images[i])
+  },
+  sortImages: function(){
+    let length = this.data.images.length;
+    for(let x = 0; x < length; x++){
+      this.addImage(this.data.images[x]);
     }
+  },
+  sortVideos: function(){
+    this.addVideo(this.data.videos);    
   }
 }
 
